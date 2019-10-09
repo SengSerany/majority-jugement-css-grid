@@ -1,13 +1,16 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.title {
+    display: flex;
+    justify-content: center;
+}
 
 .graphique {
     display: flex;
     width: 80%;
     margin: auto;
     position: relative;
-
 }
 
 .candidatName {
@@ -47,4 +50,8 @@
     top: 275px;
     color: gray;
     text-shadow: 2 0 0 white;
+}
+
+p { 
+    font-size: 14px;
 }
