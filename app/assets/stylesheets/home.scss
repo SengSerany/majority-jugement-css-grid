@@ -1,0 +1,50 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.graphique {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    position: relative;
+
+}
+
+.candidatName {
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(100, 10px);
+    margin: auto;
+}
+
+.candidat {
+    margin: 15px;
+    height: 400px;
+    background-color: grey;
+}
+
+.mark {
+    width: 10%;
+}
+
+.mediane {
+    display: flex;
+    justify-content: center;
+}
+
+.mediane hr {
+    background-color: #E1E1D4;
+    height: 1px;
+    border: 1px solid #E1E1D4;
+    position: absolute;
+    width: 80%;
+    top: 300px;
+}
+
+.mediane p {
+    position: absolute;
+    width: 80%;
+    top: 275px;
+    color: gray;
+    text-shadow: 2 0 0 white;
+}

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  candidat: one
+  mark: one
+  list: one
+
+two:
+  candidat: two
+  mark: two
+  list: two
