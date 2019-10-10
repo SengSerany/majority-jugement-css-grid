@@ -6,4 +6,9 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get update" do
+    get home_update_url
+    assert_response :success
+  end
+
 end

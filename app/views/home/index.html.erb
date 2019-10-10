@@ -1,30 +1,34 @@
 <div class="title">
     <h1>Le jugement majoritaire</h1><br/>
 </div>
+
+<div>
+<%= button_to "Activer la simulation", home_path %>
+</div>
 <div class="graphique">
     <div class="candidatName">
         <% @candidats.each do |candidat| %>
         <div class="candidat">
-
         <% totalVote = candidat.exellent + candidat.veryGood + candidat.good + candidat.soSo + candidat.notReally + candidat.bad + candidat.veryBad%>
-
-        <% exellent = (candidat.exellent * 100) / totalVote %>
-        <% veryGood = (candidat.veryGood * 100) / totalVote %>
-        <% good = (candidat.good * 100) / totalVote %>
-        <% soSo = (candidat.soSo * 100) / totalVote %>
-        <% notReally = (candidat.notReally * 100) / totalVote %>
-        <% bad = (candidat.bad * 100) / totalVote %>
-        <% veryBad = (candidat.veryBad * 100) / totalVote %>
-            <div style="height: <%= veryBad %>%; background-color: #F9B871">-</div>
-            <div style="height: <%= bad %>%; background-color: #F9F871">--</div>
-            <div style="height: <%= notReally %>%; background-color: #FFC75F">~</div>
-            <div style="height: <%= soSo %>%; background-color: #FF9671">~~</div>
-            <div style="height: <%= good %>%; background-color: #FF6F91;">+</div>
-            <div style="height: <%= veryGood %>%; background-color: #D65DB1;">++</div>
-            <div style="height: <%= exellent %>%; background-color: #845EC2;">+++</div>
-            <p><%= candidat.name %></p>
-        </div>
-        <% end %>
+        <% if totalVote != 0 %>
+            <% exellent = (candidat.exellent * 100) / totalVote %>
+            <% veryGood = (candidat.veryGood * 100) / totalVote %>
+            <% good = (candidat.good * 100) / totalVote %>
+            <% soSo = (candidat.soSo * 100) / totalVote %>
+            <% notReally = (candidat.notReally * 100) / totalVote %>
+            <% bad = (candidat.bad * 100) / totalVote %>
+            <% veryBad = (candidat.veryBad * 100) / totalVote %>
+                <div style="height: <%= veryBad %>%; background-color: #F9B871">-</div>
+                <div style="height: <%= bad %>%; background-color: #F9F871">--</div>
+                <div style="height: <%= notReally %>%; background-color: #FFC75F">~</div>
+                <div style="height: <%= soSo %>%; background-color: #FF9671">~~</div>
+                <div style="height: <%= good %>%; background-color: #FF6F91;">+</div>
+                <div style="height: <%= veryGood %>%; background-color: #D65DB1;">++</div>
+                <div style="height: <%= exellent %>%; background-color: #845EC2;">+++</div>
+                <p><%= candidat.name %></p>
+            </div>
+            <% end %>
+        <%end%>
     </div>
 </div>
 
